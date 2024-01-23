@@ -1,8 +1,13 @@
-#dictionaries or dict
+#practicing funcions in python
+import functionsPage
 
-scores = {"nam":"failed", "ferdous":50, "oscar":100}
-print(scores["oscar"])
+length= int(input("Give length"))
+print(f"You gave, {length}")
 
-scores["bokchod"]=-129
-print(scores["bokchod"])
-print(scores)
+width = int(input("Give width"))
+print(f"You gave, {width}")
+
+print(f"area is, {functionsPage.area(length,width)}")
+
+for i in range(10):
+    print(f"{i} square is, {functionsPage.square(i)}")
