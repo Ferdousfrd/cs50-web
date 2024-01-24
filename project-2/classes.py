@@ -1,17 +1,27 @@
 #practicing classes in python
 
-class capacity():
-    def __init__(self, tickets, passengers):
-        self.a = tickets
-        self.b = passengers
+class Flight():
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.passengers = []
 
-soldTicket = int(input("Enter amount of tickets been sold: "))
-biman = capacity(300, soldTicket)
+    def addingPass(self, names):
+        if not self.openCapacity():
+            return False
+        self.passengers.append(names)
+        return True
 
-print(f"Total tickets are, {biman.a}")
-print(f"Total tickets been sold, {biman.b}")
+    def openCapacity(self):
+        return self.capacity-len(self.passengers)
 
-if biman.b < biman.a :
-    print("There are still tickets available!")
-else :
-    print("No more tickets!")
+
+
+bimanBala = Flight(3)
+
+people = ["jack", "bichi", "sda", "ava"]
+for i in people:
+    success = bimanBala.addingPass(i)
+    if success:
+        print(f"We added {i} successfully")
+    else:
+        print(f"{i} cant board, plane full")
