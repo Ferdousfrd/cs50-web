@@ -49,4 +49,31 @@ Jaakko = Friends.from_string(new_friend)
 import datetime
 my_date = datetime.date(2024, 2, 14)
 
-print(Friends.is_partyday(my_date))
+#print(Friends.is_partyday(my_date))
+
+
+
+### Inheritance or subclasses ###
+
+class BestFriends(Friends):
+    raise_age = 1
+    
+    def __init__(self, name, hobby, age, fav_song):
+        super().__init__(name, hobby, age)              # supper() inits parent variables
+        self.fav_song = fav_song
+
+viktoria = BestFriends("Vicky", "reading", 19, "Dunno")
+viktoria.intro()
+print(viktoria.fav_song)
+
+### another subclass ###
+
+class Family(Friends):
+    def __init__(self, name, hobby, age, fav_dish):
+        super().__init__(name, hobby, age)
+        self.fav_dish = fav_dish
+
+pervez = Family("Pervez", "word", 30, "biriyani")
+pervez.intro()
+print(pervez.fav_dish)
+
