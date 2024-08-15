@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exchange Currency</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                
+                fetch('https://covid-api.com/api/regions')
+                .then(response => {
+                    return response.json()
+                })
+                .then(data => {
+                    const regions = data.data; // Access the array inside the response
+                    const isoCodes = regions.map(region => region.iso); // Get all ISO codes
+                    const isoCodesString = isoCodes.join(', '); // Join ISO codes into a string
+                    document.querySelector('body').innerHTML = isoCodesString; // Display the ISO codes
+                    console.log(isoCodesString);
+                })  
+
+            })
+
+            //json file {"data":[
+            //  {"iso":"CHN",
+            //   "name":"China"},
+            //  {"iso":"TWN","name":"Taipei and environs"}
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>
+

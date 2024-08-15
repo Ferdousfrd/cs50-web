@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Jankta Corp.",
+        "numberOfEmployees": 12,
+        "ceo": "Ferdous",
+        "rating": 0
+    },
+    {
+        "name": "Tammela Corp.",
+        "numberOfEmployees": 20,
+        "ceo": "Mikko",
+        "rating": 3
+    },
+    {
+        "name": "Tulli Corp.",
+        "numberOfEmployees": 2,
+        "ceo": "Jakko",
+        "rating": 2
+    }
+]
